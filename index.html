@@ -6,6 +6,9 @@
     <title>Industrial SS Tank Manufacturer | Dairy & Pharma Plants | Martik Pharma</title>
     <meta name="description" content="Custom stainless steel tanks, reactors, and turnkey piping solutions for Dairy, Pharma, and Chemical industries. 13+ years exp. Get a budgetary quote in 24 hours.">
     
+    <!-- Favicon -->
+    <link rel="icon" href="https://martikpharma.com/favicon.jpg">
+
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="business.business">
     <meta property="og:title" content="Martik Pharma - Industrial Storage & Processing Solutions">
@@ -19,7 +22,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Martik Pharma & Chemical Industries",
-      "image": "https://martikpharma.com/BlastRoomWithCondensingUnit1.png",
+      "image": "https://martikpharma.com/logo.jpg",
       "telephone": "+917290807212",
       "email": "arnab.m@martikpharma.com",
       "address": {
@@ -82,7 +85,7 @@
             color: var(--text-main);
             background-color: var(--white);
             overflow-x: hidden;
-            padding-top: 70px; /* Space for sticky header */
+            padding-top: 80px; /* Space for sticky header */
         }
 
         h1, h2, h3, h4 {
@@ -191,7 +194,7 @@
             background: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 1000;
-            height: 70px;
+            height: 80px;
             display: flex;
             align-items: center;
         }
@@ -203,12 +206,10 @@
             width: 100%;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .logo img {
+            height: 60px;
+            width: auto;
+            display: block;
         }
 
         .nav-menu {
@@ -230,6 +231,7 @@
         .header-cta-group {
             display: flex;
             gap: 10px;
+            align-items: center;
         }
 
         .header-btn {
@@ -239,11 +241,13 @@
 
         .mobile-toggle {
             display: none;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             cursor: pointer;
+            margin-left: 10px;
+            color: var(--primary);
         }
 
-        /* --- Hero Section (Restored Video & Particles) --- */
+        /* --- Hero Section (Video Background) --- */
         .hero {
             position: relative;
             height: 80vh; /* Better for video */
@@ -746,6 +750,7 @@
         @media (max-width: 768px) {
             body { padding-top: 60px; }
             .header { height: 60px; }
+            .logo img { height: 45px; } /* Smaller logo on mobile */
             .nav-menu {
                 position: fixed;
                 top: 60px;
@@ -774,7 +779,11 @@
     <!-- Sticky Header -->
     <header class="header">
         <div class="container header-content">
-            <div class="logo">Martik Pharma</div>
+            <div class="logo">
+                <a href="#">
+                    <img src="https://martikpharma.com/logo.jpg" alt="Martik Pharma Logo">
+                </a>
+            </div>
             
             <nav class="nav-menu" id="navMenu">
                 <a href="#solutions" class="nav-link">Solutions</a>
@@ -1039,6 +1048,10 @@
                             <input type="text" id="f_name" class="form-control" required placeholder="Ex. Rajesh Kumar">
                         </div>
                         <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" id="f_email" class="form-control" required placeholder="Ex. email@company.com">
+                        </div>
+                        <div class="form-group">
                             <label>Company Name</label>
                             <input type="text" id="f_company" class="form-control" placeholder="Ex. ABC Dairy Pvt Ltd">
                         </div>
@@ -1176,61 +1189,87 @@
     <a href="https://wa.me/917290807212" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
+ <script>
+  // Set Year
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    <script>
-        // Set Year
-        document.getElementById('year').textContent = new Date().getFullYear();
+  // ----------------------------------------------------
+  // GOOGLE SHEET CONFIGURATION
+  // PASTE YOUR DEPLOYED WEB APP URL HERE (must end with /exec)
+  // ----------------------------------------------------
+  const scriptURL = 'PASTE_YOUR_WEB_APP_URL_HERE';
 
-        // Mobile Menu Toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
+  // Mobile Menu Toggle
+  const mobileToggle = document.getElementById('mobileToggle');
+  const navMenu = document.getElementById('navMenu');
 
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
-        });
+  mobileToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+  });
 
-        // Close menu on link click
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileToggle.textContent = '☰';
-            });
-        });
+  // Close menu on ANY link click (including the "Get Quote" button)
+  document.querySelectorAll('#navMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      mobileToggle.textContent = '☰';
+    });
+  });
 
-        // Lead Form Handler
-        const form = document.getElementById('leadForm');
-        const successDiv = document.getElementById('formSuccess');
-        const fallbackLink = document.getElementById('fallbackLink');
+  // Lead Form Handler
+  const form = document.getElementById('leadForm');
+  const successDiv = document.getElementById('formSuccess');
+  const fallbackLink = document.getElementById('fallbackLink');
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('f_name').value;
-            const company = document.getElementById('f_company').value;
-            const phone = document.getElementById('f_phone').value;
-            const type = document.getElementById('f_type').value;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-            // 1. Hide form, show success
-            form.style.display = 'none';
-            successDiv.style.display = 'block';
+    const name = document.getElementById('f_name').value.trim();
+    const email = document.getElementById('f_email').value.trim();
+    const company = document.getElementById('f_company').value.trim();
+    const phone = document.getElementById('f_phone').value.trim();
+    const type = document.getElementById('f_type').value;
 
-            // 2. Construct WhatsApp Message
-            const text = `Hi, I am ${name}${company ? ' from ' + company : ''}. I need a quote for: ${type}.`;
-            const waURL = `https://wa.me/917290807212?text=${encodeURIComponent(text)}`;
+    // 1. Prepare data for WhatsApp
+    const text = `Hi, I am ${name}${company ? ' from ' + company : ''}. I need a quote for: ${type}.`;
+    const waURL = `https://wa.me/917290807212?text=${encodeURIComponent(text)}`;
 
-            // 3. Update fallback link
-            fallbackLink.href = waURL;
+    // 2. Prepare data for Google Sheet
+    const requestBody = new FormData();
+    requestBody.append('name', name);
+    requestBody.append('email', email);
+    requestBody.append('phone', phone);
+    requestBody.append('company', company);
+    requestBody.append('requirement', type);
 
-            // 4. Redirect after short delay
-            setTimeout(() => {
-                window.open(waURL, '_blank');
-                // Also trigger mailto as backup in background
-                const mailSubject = `New Website Inquiry: ${type}`;
-                const mailBody = `Name: ${name}\nPhone: ${phone}\nCompany: ${company}\nReq: ${type}`;
-                window.location.href = `mailto:arnab.m@martikpharma.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
-            }, 1500);
-        });
-    </script>
+    // Extra context (optional but useful)
+    requestBody.append('page_url', window.location.href);
+    requestBody.append('user_agent', navigator.userAgent);
+
+    // 3. Hide form, show success immediately
+    form.style.display = 'none';
+    successDiv.style.display = 'block';
+    fallbackLink.href = waURL;
+
+    // 4. Send to Google Sheets (if URL is configured)
+    if (scriptURL && scriptURL !== 'PASTE_YOUR_WEB_APP_URL_HERE') {
+      fetch(scriptURL, {
+        method: 'POST',
+        body: requestBody,
+        mode: 'no-cors'
+      }).catch(error => console.error('Google Sheet Error:', error));
+    }
+
+    // 5. Redirect to WhatsApp after short delay
+    setTimeout(() => {
+      window.open(waURL, '_blank');
+    }, 1500);
+  });
+</script>
 </body>
 </html>
+
+
+
+
+ 
