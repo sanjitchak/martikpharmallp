@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martik Pharma & Chemical Industries - Premium Storage Tank Manufacturers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        :root {
+            --primary: #1a5490;
+            --secondary: #2c7ac1;
+            --accent: #ff6b35;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            position: relative;
+        }
+
+
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .hero-video iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            border: none;
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+            .hero-video iframe {
+                width: 100%;
+                height: 56.25vw;
+            }
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+            .hero-video iframe {
+                width: 177.78vh;
+                height: 100%;
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 1;
+        }
+
+        /* Animated background particles */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 12s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 18s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 15s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 20s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 14s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 16s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 2s; animation-duration: 19s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 4s; animation-duration: 13s; }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) scale(1);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateY(-20vh) scale(1.5);
+                opacity: 0.6;
+            }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+            z-index: 3;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.3s both;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s both, pulse 2s infinite;
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 107, 53, 0.4);
+            background: #ff7e4f;
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 15px 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            transform: translateY(-100px);
+            animation: slideDown 0.5s ease 0.5s forwards;
+        }
+
+        @keyframes slideDown {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: all 0.3s;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            animation: none;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .section-title.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: width 0.6s ease 0.3s;
+        }
+
+        .section-title.visible::after {
+            width: 80px;
+        }
+
+        /* Industries Section */
+        .industries {
+            background: var(--light);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .industry-card {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+            overflow: hidden;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: white;
+        }
+
+        .industry-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+            z-index: 1;
+            transition: all 0.3s;
+        }
+
+        .industry-card:hover::before {
+            background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
+        }
+
+        .industry-card > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .industry-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .industry-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .industry-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: white;
+            display: inline-block;
+            animation: iconFloat 3s ease-in-out infinite;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .industry-card h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            padding: 10px 25px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .industry-card p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1rem;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Industry-specific backgrounds - Replace with your own images */
+        .industry-card:nth-child(1) {
+            background-image: url('https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?w=800&h=600&fit=crop');
+        }
+
+        .industry-card:nth-child(2) {
+            background-image: url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=600&fit=crop');
+        }
+
+        .industry-card:nth-child(3) {
+            background-image: url('https://images.unsplash.com/photo-1550583724-b2692b85b150?w=800&h=600&fit=crop');
+        }
+
+        .industry-card:nth-child(4) {
+            background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop');
+        }
+
+        .industry-card:nth-child(5) {
+            background-image: url('brush.jpg');
+        }
+
+        .industry-card:nth-child(6) {
+            background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop');
+        }
+
+        .industry-card:nth-child(7) {
+            background-image: url('resin.jpg');
+        }
+
+        .industry-card:nth-child(8) {
+            background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop');
+        }
+
+        @keyframes iconFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .industry-card:hover .industry-icon {
+            animation: iconSpin 0.5s ease;
+        }
+
+        @keyframes iconSpin {
+            from {
+                transform: rotate(0deg) scale(1);
+            }
+            to {
+                transform: rotate(360deg) scale(1.2);
+            }
+        }
+
+        .industry-card h3 {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+        }
+
+        .about-text strong {
+            color: var(--primary);
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        /* Animated Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 10px;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.6s ease;
+        }
+
+        .stat-item.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: var(--dark);
+            color: white;
+        }
+
+        .gallery .section-title {
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .gallery-item.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .gallery-item:hover::before {
+            left: 100%;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.6s ease;
+        }
+
+        .contact-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            animation: iconPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Contact Form */
+        .contact-form {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.6s ease;
+        }
+
+        .contact-form.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .contact-form button:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .contact-form button:hover {
+            background: #ff7e4f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Customers Section */
+        .customers {
+            background: white;
+        }
+
+        .customers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .customer-category {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.6s;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .customer-category.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .customer-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .customer-category h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .customer-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .customer-category li {
+            padding: 10px 0;
+            color: var(--gray);
+            font-size: 0.95rem;
+            border-bottom: 1px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+
+        .customer-category li:last-child {
+            border-bottom: none;
+        }
+
+        .customer-category li:hover {
+            color: var(--primary);
+            padding-left: 10px;
+        }
+
+        .customer-category li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Products Section */
+        .products {
+            background: var(--light);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .product-category {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.6s;
+            border-left: 5px solid var(--accent);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .product-category.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-left-width: 8px;
+        }
+
+        .product-category h3 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .product-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-category li {
+            padding: 12px 0;
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .product-category li:last-child {
+            border-bottom: none;
+        }
+
+        .product-category li:hover {
+            color: var(--primary);
+            padding-left: 15px;
+            background: var(--light);
+        }
+
+        .product-category li::before {
+            content: '●';
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        /* Product Modal */
+        .product-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .product-modal.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.4s ease;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            background: #ff7e4f;
+            transform: rotate(90deg);
+        }
+
+        .modal-image {
+            display: none;
+        }
+
+        .modal-body {
+            padding: 60px 40px 40px 40px;
+            border-radius: 20px;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .modal-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+        }
+
+        .modal-specs {
+            margin-top: 25px;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .modal-specs h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .modal-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modal-specs li {
+            padding: 8px 0;
+            color: var(--gray);
+        }
+
+        .modal-specs li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                height: 100vh;
+                min-height: 100vh;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+                line-height: 1.4;
+            }
+
+            .hero p:first-of-type {
+                font-size: 1rem !important;
+            }
+
+            .hero-content {
+                padding: 0 15px;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 65px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 65px);
+                background: white;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 30px 0;
+                transition: left 0.3s ease;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links a {
+                margin: 0;
+                padding: 15px 30px;
+                border-bottom: 1px solid #f0f0f0;
+                color: var(--dark);
+                font-size: 1.1rem;
+                text-align: left;
+            }
+
+            .nav-links a::after {
+                display: none;
+            }
+
+            .nav-links a:hover {
+                background: var(--light);
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 0.95rem;
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .customers-grid,
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 0.85rem;
+            }
+
+            .hero p:first-of-type {
+                font-size: 0.9rem !important;
+                line-height: 1.4;
+                word-break: break-word;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+
+            .industry-card h3 {
+                font-size: 1.2rem;
+                padding: 8px 20px;
+                word-wrap: break-word;
+            }
+
+            .industries-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .modal-content {
+                width: 95%;
+                max-height: 85vh;
+            }
+
+            .modal-body {
+                padding: 40px 20px 20px 20px;
+            }
+
+            .modal-title {
+                font-size: 1.5rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-content {
+                padding: 0 15px;
+            }
+
+            .customers-grid,
+            .products-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+        <div class="nav-content">
+            <div class="logo">MARTIK PHARMA</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#industries">Industries</a>
+                <a href="#about">About</a>
+                <a href="#customers">Clients</a>
+                <a href="#products">Products</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-video-container">
+            <div class="hero-video">
+                <iframe src="https://www.youtube.com/embed/PX62AAfTm2Y?autoplay=1&mute=1&loop=1&playlist=PX62AAfTm2Y&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="hero-content">
+            <h1><span style="color: var(--accent); font-size: 1.2em; text-shadow: 3px 3px 6px rgba(0,0,0,0.5);">13+</span> Years of Engineering Excellence in Industrial Storage Solutions</h1>
+            <p style="font-size: 1.3rem; margin-bottom: 15px;">Trusted by <strong style="color: var(--accent);">Mother Dairy, Amul, Dabur, Patanjali, Haldiram, Hamdard & Coca-Cola</strong></p>
+            <p>Premium Storage Tanks & Processing Equipment for Pharmaceutical, Food, Chemical & Manufacturing Industries</p>
+            <a href="mailto:arnab.m@martikpharma.com" class="cta-button">Discuss Your Project →</a>
+        </div>
+    </section>
+
+    <section class="industries" id="industries">
+        <div class="container">
+            <h2 class="section-title">Industries We Serve</h2>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <h3>Pharmaceutical</h3>
+                    <p>GMP-compliant storage solutions for drug manufacturing</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Food & Beverage</h3>
+                    <p>Hygienic tanks for food processing and beverage production</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Dairy</h3>
+                    <p>Specialized equipment for dairy product manufacturing</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Chemical</h3>
+                    <p>Corrosion-resistant tanks for chemical processing</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Paints & Coatings</h3>
+                    <p>Custom solutions for paint and coating manufacturers</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Cosmetics</h3>
+                    <p>Precision equipment for cosmetic formulation</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Resin Manufacturing</h3>
+                    <p>Industrial tanks for resin production processes</p>
+                </div>
+                <div class="industry-card">
+                    <h3>General Manufacturing</h3>
+                    <p>Versatile storage solutions for various industries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Martik Pharma</h2>
+            <div class="about-content">
+                <div>
+                    <div class="about-text">
+                        <strong>13+ Years of Engineering Excellence</strong>
+                        Established in 2012, Martik Pharma And Chemical Industries has become Greater Noida's trusted partner for industrial storage solutions. We specialize in manufacturing premium storage tanks, heat exchangers, and processing equipment for pharmaceutical, food, chemical, and manufacturing industries.
+                        <br><br>
+                        Our commitment to quality, precision engineering, and customer satisfaction has established us as industry leaders. We serve clients across Greater Noida, Delhi, and beyond with customized solutions that meet the highest industry standards.
+                        <br><br>
+                        Every project benefits from our dedicated team's expertise, modern manufacturing facility, and unwavering focus on delivering solutions that exceed expectations.
+                    </div>
+                </div>
+                <div>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="13">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="500">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">Quality Assured</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px; padding: 30px; background: var(--light); border-radius: 10px;">
+                        <h3 style="color: var(--primary); margin-bottom: 15px;">Our Expertise</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 8px 0; border-bottom: 1px solid #ddd;">✓ Storage Tank Manufacturing</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #ddd;">✓ Heat Exchanger Solutions</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #ddd;">✓ Valve Systems</li>
+                            <li style="padding: 8px 0; border-bottom: 1px solid #ddd;">✓ HVAC Consultation</li>
+                            <li style="padding: 8px 0;">✓ Custom Industrial Equipment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="customers" id="customers">
+        <div class="container">
+            <h2 class="section-title">Trusted By Industry Leaders</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--gray); margin-bottom: 30px;">We are proud to serve some of India's most respected companies</p>
+            <div class="customers-grid">
+                <div class="customer-category">
+                    <h3>Dairy Industry</h3>
+                    <ul>
+                        <li>Anik Milk Foods (P) Ltd – Devas</li>
+                        <li>VRS Foods Ltd Sahibabad (Paras Dairy)</li>
+                        <li>Mother Dairy, Delhi – Project Equipment</li>
+                        <li>Amul – Anand – CIP Systems</li>
+                        <li>Mother Dairy, Tirupati – CIP System</li>
+                        <li>J.K. Dairy Foods Pvt Ltd</li>
+                        <li>SS P Ltd – Faridabad</li>
+                        <li>Patanjali Ayurved Ltd – Alwar/Newasa</li>
+                    </ul>
+                </div>
+                <div class="customer-category">
+                    <h3>Process Industry</h3>
+                    <ul>
+                        <li>Promed Export Pvt. Ltd.</li>
+                        <li>D & S Group, Noida</li>
+                        <li>Usher Agro Ltd. Mathura</li>
+                        <li>Hindustan Coca Cola Beverages (P) Ltd</li>
+                        <li>Dabur India Limited (Multiple Locations)</li>
+                    </ul>
+                </div>
+                <div class="customer-category">
+                    <h3>Snacks Industry</h3>
+                    <ul>
+                        <li>Mahesh Namkeen Pvt Ltd – Lucknow</li>
+                        <li>Haldiram Snacks Pvt Ltd (Multiple Locations)</li>
+                    </ul>
+                </div>
+                <div class="customer-category">
+                    <h3>Pharmaceutical Industry</h3>
+                    <ul>
+                        <li>Ambe Phytoextracts Pvt Ltd – Almora</li>
+                        <li>Brawn Laboratories – Faridabad</li>
+                        <li>Hamdard Laboratories (India)</li>
+                        <li>Bio Lifescience – Kasna</li>
+                        <li>Herbex Drugs (P) Ltd – Uttarakhand</li>
+                        <li>Win Medicare – Modipuram</li>
+                        <li>Akums Drug's – HDD</li>
+                        <li>Horiba Pharma – HDD</li>
+                        <li>G.S. Pharmabutor Pvt Ltd</li>
+                        <li>T.C. Health Care</li>
+                    </ul>
+                </div>
+                <div class="customer-category">
+                    <h3>Paint Industry</h3>
+                    <ul>
+                        <li>Sonalac Paints and Coatings Limited</li>
+                        <li>UK Paints Pvt Ltd – Sikundrabad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Product Range</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--gray); margin-bottom: 30px;">Complete infrastructure for designing, manufacturing, and commissioning</p>
+            <div class="products-grid">
+                <div class="product-category">
+                    <h3>Dairy Equipment</h3>
+                    <ul>
+                        <li>SS Tanks (AISI 304/316) – VMST, HMST (20L – 100KL)</li>
+                        <li>Storage, Holding, Chilling Vessels</li>
+                        <li>Bulk Milk Coolers (BMC)</li>
+                        <li>Plate Heat Exchanger (PHE)</li>
+                        <li>Line Pasteurizers</li>
+                        <li>Road Milk Tanker (RMT)</li>
+                        <li>Butter Churner</li>
+                        <li>Milk Vending Machine (MVM)</li>
+                        <li>Multipurpose Vats (Ghee/Curd/Paneer/Khoa)</li>
+                        <li>CIP System</li>
+                        <li>Turnkey Dairy Processing Plants</li>
+                    </ul>
+                </div>
+                <div class="product-category">
+                    <h3>Pharmaceutical Equipment</h3>
+                    <ul>
+                        <li>SS Tanks (AISI 304/316) – VMST, HMST (20L – 100KL)</li>
+                        <li>Reactor & Pressure Vessels</li>
+                        <li>Herb Extraction Plant (Aqueous/Alcohol)</li>
+                        <li>SS Pulverizers (Hammer/Impact)</li>
+                        <li>Blenders / Mixers (Ribbon/Octa/Mass Mixer)</li>
+                        <li>Vibro Shifters & Gyro Shifter</li>
+                        <li>High Shear Emulsifier (Hydraulic)</li>
+                        <li>Zero Hold Discharge Filter Press</li>
+                        <li>Ointment Manufacturing (Paste Kettle)</li>
+                        <li>Clean Room Furniture SS-304</li>
+                        <li>Wet Scrubbers</li>
+                    </ul>
+                </div>
+                <div class="product-category">
+                    <h3>Other Equipment</h3>
+                    <ul>
+                        <li>Screw Conveyor</li>
+                        <li>Powder Dispensing Systems</li>
+                        <li>Screw Turbine</li>
+                        <li>SS/MS Fabrication Work</li>
+                        <li>Heat Exchangers</li>
+                        <li>Custom Industrial Solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Manufacturing Excellence</h2>
+            <p style="text-align: center; margin-bottom: 40px; opacity: 0.9; font-size: 1.1rem;">State-of-the-art facility and precision-engineered products</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="1.jpg" alt="Factory Floor" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="gallery-item">
+                    <img src="2.jpg" alt="Manufacturing Equipment" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="gallery-item">
+                    <img src="3.jpg" alt="Storage Tanks" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="gallery-item">
+                    <img src="4.jpg" alt="Quality Control" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="gallery-item">
+                    <img src="5.jpg" alt="Production Line" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="gallery-item">
+                    <img src="6.jpg" alt="Finished Products" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 style="font-size: 2rem; margin-bottom: 30px;">Let's Discuss Your Project</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Location</strong><br>
+                            G 107, Site-B, Upsidc<br>
+                            Surajpur Industrial Area<br>
+                            Greater Noida - 201308
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:arnab.m@martikpharma.com" style="color: var(--accent); text-decoration: none;">arnab.m@martikpharma.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            <a href="https://wa.me/917290807212" style="color: var(--accent); text-decoration: none;" target="_blank">+91 7290807212</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🏢</div>
+                        <div>
+                            <strong>GSTIN</strong><br>
+                            09AAUFM6594K1Z6
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                        <input type="text" name="company" placeholder="Company Name">
+                        <textarea name="message" rows="5" placeholder="Tell us about your project requirements" required></textarea>
+                        <button type="submit">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img src="" alt="Product" class="modal-image" id="modalImage">
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-specs" id="modalSpecs"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Martik Pharma And Chemical Industries. All Rights Reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.7;">Engineering Excellence Since 2012</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917290807212" class="whatsapp-float" target="_blank">
+        💬
+    </a>
+
+    <script>
+        // Product data with images and descriptions
+        const productData = {
+            'SS Tanks (AISI 304/316) – VMST, HMST (20L – 100KL)': {
+                image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop',
+                description: 'High-quality stainless steel tanks manufactured with AISI 304 and 316 grade steel. Perfect for storage, mixing, and processing in dairy, pharmaceutical, and chemical industries.',
+                specs: ['Capacity: 20L to 100KL', 'Material: AISI 304/316', 'Vertical and Horizontal variants', 'Insulated options available', 'GMP compliant design']
+            },
+            'Storage, Holding, Chilling Vessels': {
+                image: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&h=600&fit=crop',
+                description: 'Specialized vessels for storage, holding, and chilling applications in dairy and food processing. Designed for maintaining product quality and temperature control.',
+                specs: ['Jacketed construction', 'Temperature control system', 'Various capacities', 'Sanitary design', 'Easy maintenance']
+            },
+            'Bulk Milk Coolers (BMC)': {
+                image: 'https://images.unsplash.com/photo-1563636619-e9143da7973b?w=800&h=600&fit=crop',
+                description: 'Advanced bulk milk cooling systems designed for rapid chilling and storage of fresh milk. Maintains optimal temperature to preserve milk quality and extend shelf life.',
+                specs: ['Rapid cooling technology', 'Energy efficient', 'Various capacities available', 'Easy to clean design', 'Temperature monitoring system']
+            },
+            'Plate Heat Exchanger (PHE)': {
+                image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop',
+                description: 'Efficient heat transfer equipment for pasteurization and temperature control processes. Compact design with high thermal efficiency for dairy and food processing.',
+                specs: ['High heat transfer efficiency', 'Compact footprint', 'Easy maintenance', 'Sanitary design', 'Multiple flow configurations']
+            },
+            'Line Pasteurizers': {
+                image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop',
+                description: 'Continuous pasteurization systems for milk and beverage processing. Ensures product safety while maintaining nutritional quality and taste.',
+                specs: ['Continuous operation', 'Precise temperature control', 'Energy efficient', 'Automatic operation', 'Easy cleaning']
+            },
+            'Road Milk Tanker (RMT)': {
+                image: 'https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&h=600&fit=crop',
+                description: 'Insulated stainless steel road milk tankers for safe transportation of milk and dairy products. Designed to maintain temperature during transit.',
+                specs: ['Insulated construction', 'Food grade SS 304', 'Various capacities', 'Easy loading/unloading', 'Temperature maintenance']
+            },
+            'Butter Churner': {
+                image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop',
+                description: 'Industrial butter churners for efficient butter production from cream. Designed for consistent quality and high productivity in dairy operations.',
+                specs: ['Variable speed control', 'SS construction', 'Easy product discharge', 'Low maintenance', 'Various capacities']
+            },
+            'Milk Vending Machine (MVM)': {
+                image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=600&fit=crop',
+                description: 'Automated milk vending machines for dispensing fresh milk directly to consumers. Features refrigeration and digital payment systems.',
+                specs: ['Refrigerated storage', 'Digital payment integration', 'Automated dispensing', 'Touch screen interface', 'Remote monitoring']
+            },
+            'Multipurpose Vats (Ghee/Curd/Paneer/Khoa)': {
+                image: 'https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=800&h=600&fit=crop',
+                description: 'Versatile manufacturing vats for traditional dairy products including ghee, curd, paneer, and khoa. Jacketed design for precise temperature control.',
+                specs: ['Jacketed construction', 'Temperature control', 'Agitation system', 'Multiple discharge options', 'Easy cleaning']
+            },
+            'CIP System': {
+                image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop',
+                description: 'Clean-in-Place (CIP) systems for automated cleaning of process equipment. Ensures thorough sanitation without disassembly, saving time and labor costs.',
+                specs: ['Automated cleaning cycles', 'Chemical dosing system', 'PLC controlled', 'Water and chemical recovery', 'Validation compliant']
+            },
+            'Turnkey Dairy Processing Plants': {
+                image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=600&fit=crop',
+                description: 'Complete turnkey solutions for dairy processing plants. From milk reception to packaging, we provide end-to-end project execution with installation and commissioning.',
+                specs: ['Complete project management', 'Custom design', 'Installation & commissioning', 'Training support', 'After-sales service']
+            },
+            'Reactor & Pressure Vessels': {
+                image: 'https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?w=800&h=600&fit=crop',
+                description: 'Industrial reactors and pressure vessels for pharmaceutical manufacturing. Built to withstand high pressure and temperature conditions with precision control.',
+                specs: ['Pressure rated design', 'Jacketed construction', 'Agitation systems', 'Temperature control', 'cGMP compliant']
+            },
+            'Herb Extraction Plant (Aqueous/Alcohol)': {
+                image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&h=600&fit=crop',
+                description: 'Complete herb extraction systems for ayurvedic and pharmaceutical applications. Efficient extraction using aqueous or alcohol-based solvents.',
+                specs: ['Multi-stage extraction', 'Solvent recovery system', 'Automated operation', 'High yield efficiency', 'GMP design standards']
+            },
+            'SS Pulverizers (Hammer/Impact)': {
+                image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&h=600&fit=crop',
+                description: 'Stainless steel pulverizers for size reduction of herbs, spices, and pharmaceutical materials. Available in hammer mill and impact mill configurations.',
+                specs: ['SS 304/316 construction', 'Variable particle size', 'Dust collection system', 'Easy cleaning', 'GMP compliant']
+            },
+            'Blenders / Mixers (Ribbon/Octa/Mass Mixer)': {
+                image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&h=600&fit=crop',
+                description: 'Industrial blending equipment for dry powder and granule mixing. Available in ribbon, octagonal, and mass mixer configurations for various applications.',
+                specs: ['Gentle mixing action', 'Uniform blend quality', 'Multiple discharge options', 'GMP construction', 'Various capacities available']
+            },
+            'Vibro Shifters & Gyro Shifter': {
+                image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=800&h=600&fit=crop',
+                description: 'Vibratory and gyratory sifters for screening and grading of powders and granules. Ensures consistent particle size distribution in pharmaceutical manufacturing.',
+                specs: ['Multiple deck options', 'Easy mesh changing', 'Dust-tight construction', 'Low noise operation', 'GMP design']
+            },
+            'High Shear Emulsifier (Hydraulic)': {
+                image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop',
+                description: 'Hydraulic high shear emulsifiers for creating fine emulsions and suspensions in pharmaceutical and cosmetic manufacturing. Ensures uniform particle size distribution.',
+                specs: ['Variable speed control', 'Interchangeable mixing heads', 'Hydraulic lifting system', 'Explosion proof options', 'Easy cleaning design']
+            },
+            'Zero Hold Discharge Filter Press': {
+                image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop',
+                description: 'Advanced filter press systems with zero product hold-up for pharmaceutical filtration. Maximizes product recovery and ensures complete discharge.',
+                specs: ['Zero hold-up design', 'Automatic operation', 'Easy cake discharge', 'Sanitary construction', 'Validation support']
+            },
+            'Ointment Manufacturing (Paste Kettle)': {
+                image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop',
+                description: 'Specialized paste kettles for ointment and cream manufacturing. Features planetary mixing for thorough homogenization and temperature control.',
+                specs: ['Planetary mixing', 'Vacuum operation', 'Jacketed heating/cooling', 'Scraper blades', 'GMP compliant']
+            },
+            'Clean Room Furniture SS-304': {
+                image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop',
+                description: 'Stainless steel furniture specifically designed for cleanroom environments. Includes tables, cabinets, trolleys, and storage units meeting pharmaceutical standards.',
+                specs: ['SS 304 construction', 'Easy to clean design', 'Modular configuration', 'Corrosion resistant', 'cGMP compliant']
+            },
+            'Wet Scrubbers': {
+                image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop',
+                description: 'Industrial wet scrubbers for air pollution control and dust collection in pharmaceutical manufacturing. Removes particulates and chemical vapors efficiently.',
+                specs: ['High efficiency', 'Low pressure drop', 'Corrosion resistant', 'Easy maintenance', 'Compliant with emission norms']
+            },
+            'Screw Conveyor': {
+                image: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&h=600&fit=crop',
+                description: 'Screw conveyors for efficient material handling of powders, granules, and bulk materials. Custom designed for your specific application requirements.',
+                specs: ['Enclosed design', 'Various screw configurations', 'Dust-free operation', 'Low maintenance', 'Horizontal/inclined options']
+            },
+            'Powder Dispensing Systems': {
+                image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=800&h=600&fit=crop',
+                description: 'Automated powder dispensing systems with dust containment for pharmaceutical manufacturing. Ensures accurate weighing and minimal operator exposure.',
+                specs: ['Dust containment', 'Accurate weighing', 'Automated operation', 'Clean room compatible', 'Validation support']
+            },
+            'Screw Turbine': {
+                image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&h=600&fit=crop',
+                description: 'Screw turbines for efficient material processing and conveying. Designed for gentle handling of sensitive materials with minimal degradation.',
+                specs: ['Gentle material handling', 'Variable speed drive', 'SS construction', 'Easy maintenance', 'Multiple configurations']
+            },
+            'SS/MS Fabrication Work': {
+                image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop',
+                description: 'Custom fabrication services for stainless steel and mild steel structures, platforms, ducting, and specialized equipment for industrial applications.',
+                specs: ['Custom design', 'Quality welding', 'Precision fabrication', 'Finishing services', 'Installation support']
+            },
+            'Heat Exchangers': {
+                image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop',
+                description: 'Industrial heat exchangers for heating and cooling applications across various industries. Custom designed for optimal thermal efficiency.',
+                specs: ['Custom design', 'High efficiency', 'Various configurations', 'Sanitary options', 'Easy maintenance']
+            },
+            'Custom Industrial Solutions': {
+                image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop',
+                description: 'Tailored industrial solutions designed to meet your specific process requirements. We work closely with clients to develop innovative equipment and systems.',
+                specs: ['Customized design', 'Engineering support', 'Quality manufacturing', 'Installation & commissioning', 'After-sales service']
+            }
+        };
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set dynamic year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+
+                // Close menu when clicking on a link
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Form submission handler
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(this);
+                    const subject = 'New Project Inquiry from Website';
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const phone = formData.get('phone');
+                    const company = formData.get('company');
+                    const message = formData.get('message');
+                    const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\n\nMessage:\n${message}`;
+                    
+                    window.location.href = `mailto:arnab.m@martikpharma.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                });
+            }
+
+            // Navigation scroll effect
+            const nav = document.querySelector('.nav');
+            if (nav) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 100) {
+                        nav.style.background = 'rgba(255, 255, 255, 1)';
+                        nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+                    } else {
+                        nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                        nav.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
+                    }
+                });
+            }
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            document.querySelectorAll('.section-title, .industry-card, .stat-item, .gallery-item, .contact-item, .contact-form, .customer-category, .product-category').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Counter animation for statistics
+            function animateCounter(element) {
+                const target = parseInt(element.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        element.textContent = Math.floor(current) + (target === 100 ? '%' : '+');
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        element.textContent = target + (target === 100 ? '%' : '+');
+                    }
+                };
+
+                updateCounter();
+            }
+
+            // Observe stats for counter animation
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target.querySelector('.stat-number');
+                        if (counter && !counter.classList.contains('counted')) {
+                            counter.classList.add('counted');
+                            animateCounter(counter);
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.stat-item').forEach(stat => {
+                statsObserver.observe(stat);
+            });
+
+            // Add stagger animation to industry cards
+            document.querySelectorAll('.industry-card').forEach((card, index) => {
+                if (card) {
+                    card.style.transitionDelay = `${index * 0.1}s`;
+                }
+            });
+
+            // Add stagger animation to gallery items
+            document.querySelectorAll('.gallery-item').forEach((item, index) => {
+                if (item) {
+                    item.style.transitionDelay = `${index * 0.15}s`;
+                }
+            });
+
+            // Add stagger animation to contact items
+            document.querySelectorAll('.contact-item').forEach((item, index) => {
+                if (item) {
+                    item.style.transitionDelay = `${index * 0.2}s`;
+                }
+            });
+
+            // Add stagger animation to customer categories
+            document.querySelectorAll('.customer-category').forEach((item, index) => {
+                if (item) {
+                    item.style.transitionDelay = `${index * 0.15}s`;
+                }
+            });
+
+            // Add stagger animation to product categories
+            document.querySelectorAll('.product-category').forEach((item, index) => {
+                if (item) {
+                    item.style.transitionDelay = `${index * 0.2}s`;
+                }
+            });
+
+            // Product Modal Functionality
+            const productModal = document.getElementById('productModal');
+            const modalClose = document.getElementById('modalClose');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalSpecs = document.getElementById('modalSpecs');
+
+            // Add click event to all product items
+            document.querySelectorAll('.product-category li').forEach(item => {
+                item.addEventListener('click', function() {
+                    const productName = this.textContent.trim();
+                    const product = productData[productName];
+                    
+                    if (product) {
+                        modalImage.src = product.image;
+                        modalTitle.textContent = productName;
+                        modalDescription.textContent = product.description;
+                        
+                        // Build specs list
+                        let specsHTML = '<h4>Key Features & Specifications:</h4><ul>';
+                        product.specs.forEach(spec => {
+                            specsHTML += `<li>${spec}</li>`;
+                        });
+                        specsHTML += '</ul>';
+                        modalSpecs.innerHTML = specsHTML;
+                        
+                        productModal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            // Close modal
+            modalClose.addEventListener('click', function() {
+                productModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+
+            // Close modal when clicking outside
+            productModal.addEventListener('click', function(e) {
+                if (e.target === productModal) {
+                    productModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && productModal.classList.contains('active')) {
+                    productModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
