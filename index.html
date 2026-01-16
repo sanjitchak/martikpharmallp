@@ -119,6 +119,8 @@
             max-width: var(--container-width);
             margin: 0 auto;
             padding: 0 20px;
+            position: relative;
+            z-index: 2;
         }
 
         .section {
@@ -144,6 +146,7 @@
             border: none;
             font-size: 1rem;
             transition: all 0.3s ease;
+            text-shadow: none;
         }
 
         .btn:hover {
@@ -240,29 +243,133 @@
             cursor: pointer;
         }
 
-        /* --- Hero Section --- */
+        /* --- Hero Section (Restored Video & Particles) --- */
         .hero {
             position: relative;
-            background: linear-gradient(rgba(26, 84, 144, 0.85), rgba(26, 84, 144, 0.75)), url('https://martikpharma.com/BlastRoomWithCondensingUnit1.png');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 120px 0 100px;
+            height: 80vh; /* Better for video */
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            color: white;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .hero-video iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            border: none;
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+            .hero-video iframe {
+                width: 100%;
+                height: 56.25vw;
+            }
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+            .hero-video iframe {
+                width: 177.78vh;
+                height: 100%;
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 1;
+        }
+
+        /* Animated background particles */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 12s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 18s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 15s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 20s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 14s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 16s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 2s; animation-duration: 19s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 4s; animation-duration: 13s; }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) scale(1);
+                opacity: 0;
+            }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            50% {
+                transform: translateY(-20vh) scale(1.5);
+                opacity: 0.6;
+            }
         }
 
         .hero h1 {
             color: white;
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
         }
 
         .hero p {
-            color: rgba(255,255,255,0.9);
-            font-size: 1.25rem;
+            color: rgba(255,255,255,0.95);
+            font-size: 1.4rem;
             max-width: 800px;
             margin: 0 auto 40px;
+            position: relative;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         .hero-buttons {
@@ -270,6 +377,7 @@
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
+            position: relative;
         }
 
         /* --- Trust Bar --- */
@@ -333,7 +441,7 @@
             color: var(--dark);
         }
 
-        /* --- Industries Grid --- */
+        /* --- Industries Grid (Restored Backgrounds) --- */
         .industries-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -344,14 +452,76 @@
         .industry-card {
             background: white;
             border-radius: var(--border-radius);
-            padding: 30px;
+            padding: 40px 30px;
             box-shadow: var(--shadow);
             transition: transform 0.3s;
-            border-bottom: 4px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 350px;
+        }
+
+        .industry-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 100%);
+            z-index: 1;
+            transition: all 0.3s;
+        }
+
+        .industry-card:hover::before {
+            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.95) 100%);
         }
 
         .industry-card:hover {
             transform: translateY(-5px);
+        }
+
+        /* Industry Background Images from original file */
+        .industry-card:nth-child(1) { /* Dairy */
+            background-image: url('https://images.unsplash.com/photo-1550583724-b2692b85b150?w=800&h=600&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .industry-card:nth-child(2) { /* Pharma */
+            background-image: url('https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?w=800&h=600&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .industry-card:nth-child(3) { /* Chemical */
+             background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop');
+             background-size: cover;
+             background-position: center;
+        }
+        .industry-card:nth-child(4) { /* Food */
+            background-image: url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=600&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .industry-card h3, 
+        .industry-card p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .industry-card h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .industry-card p {
+            color: rgba(255,255,255,0.9);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         /* --- Projects Grid (The "Proof") --- */
@@ -625,8 +795,24 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Video Background) -->
     <section class="hero">
+        <div class="hero-video-container">
+            <div class="hero-video">
+                <iframe src="https://www.youtube.com/embed/PX62AAfTm2Y?autoplay=1&mute=1&loop=1&playlist=PX62AAfTm2Y&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
         <div class="container">
             <h1>Custom Industrial Storage &<br>Processing Solutions</h1>
             <p>We design, fabricate, and install SS Tanks, Piping, and Process Plants for Dairy, Pharma, and Chemical industries. Delivered on time.</p>
@@ -687,7 +873,7 @@
         </div>
     </section>
 
-    <!-- Industries -->
+    <!-- Industries (Rich Backgrounds) -->
     <section id="solutions" class="section section-bg">
         <div class="container">
             <h2 class="text-center">Industries We Serve</h2>
@@ -712,7 +898,7 @@
         </div>
     </section>
 
-    <!-- Projects Grid (The Proof) -->
+    <!-- Projects Grid (The Proof - Real Photos) -->
     <section id="projects" class="section">
         <div class="container">
             <h2 class="text-center">Recent Projects Executed</h2>
