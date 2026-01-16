@@ -1277,13 +1277,23 @@
     fallbackLink.href = waURL;
 
     // 4. Send to Google Sheets (if URL is configured)
-    if (scriptURL && scriptURL !== 'PASTE_YOUR_WEB_APP_URL_HERE') {
-      fetch(scriptURL, {
-        method: 'POST',
-        body: requestBody,
-        mode: 'no-cors'
-      }).catch(error => console.error('Google Sheet Error:', error));
-    }
+   // 4. Send to Google Sheets (reliable: URL encoded)
+if (scriptURL) {
+  const data = new URLSearchParams();
+  data.append('name', name);
+  data.append('email', email);
+  data.append('phone', phone);
+  data.append('company', company);
+  data.append('requirement', type);
+  data.append('page_url', window.location.href);
+  data.append('user_agent', navigator.userAgent);
+
+  fetch(scriptURL, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: data
+  }).catch(err => console.error('Google Sheet Error:', err));
+}
 
     // 5. Redirect to WhatsApp after short delay
     setTimeout(() => {
